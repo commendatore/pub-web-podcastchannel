@@ -28,16 +28,16 @@ header {
     text-decoration: none;
     text-transform: uppercase;
     color: $bg-color;
-  }
 
-  li a:hover {
-    color: $primary-color-hover;
-    text-decoration: line-through;
-  }
-  li a:active {
-    color: $primary-color;
-    opacity: 0.5;
-    text-decoration: line-through;
+    &:hover {
+      color: $primary-color-hover;
+      text-decoration: line-through;
+    }
+    &:active {
+      color: $bg-color;
+      opacity: 0.55;
+      text-decoration: line-through;
+    }
   }
 
   .menu {
@@ -148,6 +148,12 @@ header {
       padding: 1.625rem 0px 1.625rem 3rem;
       line-height: 1.75rem;
       color: $primary-color;
+
+      &:active {
+        color: $primary-color;
+        opacity: 0.55;
+        text-decoration: line-through;
+      }
     }
     /* logo-svg */
     .logo {
