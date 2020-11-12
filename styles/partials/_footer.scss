@@ -1,0 +1,49 @@
+/* 
+  responsive mode for mobile first
+  footer paragraph with social media icons
+*/
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 120px;
+  background-color: $bg-color;
+  p {
+    float: left;
+    padding: 31px 0px 31px 6%;
+    font-size: 14px;
+  }
+  .social-media {
+    float: right;
+    padding-right: 6%;
+    margin: 0 auto;
+    i {
+      font-size: 14px;
+      list-style: none;
+      display: inline-block;
+      margin: 10px auto;
+      padding: 23px 10px;
+    }
+  }
+}
+
+/* 
+  footer responsive mode for desktop
+  min width: 768px = 48rem
+*/
+@media (min-width: 48rem) {
+  footer {
+    height: 80px;
+  }
+}
+
+/* 
+  limit screen max width to 1200px = 75rem 
+  and center the container in the viewport
+*/
+@media (min-width: 75rem) {
+  footer {
+    max-width: 75em;
+    margin: 0 calc((100% - 75rem) / 2);
+  }
+}
