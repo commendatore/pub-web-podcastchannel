@@ -181,7 +181,7 @@ header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
     float: left;
   }
   header li a {
-    padding: 1.625rem 0px 1.625rem 3rem;
+    padding: 1.625rem 0 1.625rem 3rem;
     line-height: 1.75rem;
     color: #060a24;
   }
@@ -191,7 +191,7 @@ header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
     text-decoration: line-through;
   }
   header .logo {
-    padding: 1.25rem 0px 1.25rem 6.25rem;
+    padding: 1.25rem 0 1.25rem 6.25rem;
   }
   header .logo img {
     height: 2.25rem;
@@ -223,29 +223,37 @@ header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
   main container content for website
 */
 main {
-  padding: 44px 0 120px 0;
+  padding-top: 2.75rem;
+  padding-bottom: 7.5rem;
   width: 100%;
+  /* common-h2 */
+  /* common-button */
+  /* common-img */
+  /* common-section-layout */
+  /* 
+    section-bienvenido 
+  */
+  /* section-episodios */
+  /* section-nosotros */
+  /* section-entrevistas */
+  /* section-topicos */
+  /* section-novedades */
 }
 
-main h3,
-main h2,
-main p {
-  padding: 1rem 1rem;
-}
-
-main input,
-main iframe,
-main img {
-  margin: 1rem 1rem;
+main h2 {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 500;
+  font-size: 2.25rem;
 }
 
 main input[type="button"] {
-  /* format */
-  width: 288px;
-  height: 48px;
+  /* format-style */
+  width: 100%;
+  max-width: 18rem;
+  height: 3rem;
   border: none;
-  background: #00f3bb;
   color: #060a24;
+  background: #00f3bb;
   cursor: pointer;
   /* font-settings */
   font-family: "IBM Plex Mono", monospace;
@@ -259,11 +267,211 @@ main input[type="button"]:hover {
   background-image: linear-gradient(225deg, #0000fe 0%, #00f0b8 100%);
 }
 
-main iframe {
-  width: 298px;
-  height: 232px;
+main img {
+  display: block;
+  width: 20rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+main section {
+  /* format-layout */
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main section.bienvenido {
+  /* format-h2*/
+  /* format-p */
+  /* format-button */
+}
+
+main section.bienvenido h2 {
+  padding: 1.875rem 1rem 0 1rem;
+}
+
+main section.bienvenido h2 span {
+  text-decoration: line-through;
+}
+
+main section.bienvenido p {
+  padding: 1rem 1rem 0 1rem;
+}
+
+main section.bienvenido input[type="button"] {
+  margin: 2.25rem 1rem 1.5rem 1rem;
+}
+
+main section.episodios {
+  /* section-backgraund-gradient*/
+  background-image: linear-gradient(225deg, #0000ff 0%, #0000a3 100%);
+  /* format-h2 */
+  /* format-container-layout */
+  /*
+    &:before {
+      content: "";
+      position: fixed;
+      top: calc(50% - 1000px);
+      left: 0;
+      width: 500px;
+      height: 2000px;
+      background: #000;
+      transform: skew(-15deg);
+      transform-origin: top;
+    }
+    */
+}
+
+main section.episodios h2 {
+  padding: 0 1rem 0.75rem 1rem;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  color: white;
+}
+
+main section.episodios div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* format-elements */
+}
+
+main section.episodios div iframe {
+  margin-top: 0.625rem;
+  width: 18.625rem;
+  height: 14.5rem;
   background-color: #060a24;
   border-radius: 1rem;
+}
+
+main section.nosotros {
+  /* format-img */
+  /* format-h2 */
+  /* format-p */
+}
+
+main section.nosotros img.flotar {
+  position: relative;
+  overflow: visible;
+}
+
+main section.nosotros h2 {
+  padding: 1.75rem 1rem 0 1rem;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+main section.nosotros p {
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+}
+
+main section.entrevistas {
+  /* format-h2 */
+  /* format-container-layout */
+}
+
+main section.entrevistas h2 {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  padding: 2.875rem 1rem 0.875rem 1rem;
+}
+
+main section.entrevistas div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main section.topicos {
+  /* format-h2 */
+  /* format-container-layout */
+}
+
+main section.topicos h2 {
+  padding: 3rem 1rem 1.5rem 1rem;
+}
+
+main section.topicos div.topic {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2.5rem;
+  /* format-elements */
+}
+
+main section.topicos div.topic img {
+  height: 6.5rem;
+  width: 6.5rem;
+  margin: 0.875rem 0;
+}
+
+main section.topicos div.topic h3 {
+  width: 100%;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+main section.novedades {
+  /* section-backgraund-gradient*/
+  background-image: linear-gradient(225deg, #0000ff 0%, #0000a3 100%);
+  /* format-h2 */
+  /* format-input */
+}
+
+main section.novedades h2 {
+  padding: 0 1rem;
+  color: white;
+  text-align: center;
+}
+
+main section.novedades input {
+  margin: 2.25rem 1rem 4.25rem 1rem;
 }
 
 /* 
@@ -272,7 +480,7 @@ main iframe {
 */
 @media (min-width: 48rem) {
   main {
-    padding: 80px 0 88px 0;
+    padding: 5rem 0 5.5rem 0;
   }
 }
 
