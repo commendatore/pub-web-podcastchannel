@@ -502,6 +502,63 @@ main section.novedades div.container input {
 @media (min-width: 48rem) {
   main {
     padding: 5rem 0 5.5rem 0;
+    /* common-button */
+  }
+  main input[type="button"] {
+    font-size: 1.125rem;
+  }
+  main section.bienvenido {
+    /* h2-position */
+    /* format-p */
+    /* format-button */
+  }
+  main section.bienvenido h2 {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    padding: 2rem 0 0 5.5rem;
+  }
+  main section.bienvenido p {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    padding: 0 5.5rem;
+  }
+  main section.bienvenido input[type="button"] {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    margin: 3rem 0 6rem 5.5rem;
+    max-width: 14rem;
+    height: 3.5rem;
+  }
+  main section.episodios div.container {
+    width: 100%;
+    /* format-container-layout */
+  }
+  main section.episodios div.container h2 {
+    padding: 0 0 1.5rem 5.5rem;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  main section.episodios div.container div.podcast {
+    width: 100%;
+    padding: 0 calc($varMargin * 0.7) 4.5rem calc($varMargin * 0.7);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    /* format-elements */
+  }
+  main section.episodios div.container div.podcast iframe {
+    margin-top: 0;
+    margin-bottom: 3.3rem;
+    width: 22rem;
   }
 }
 

@@ -217,7 +217,59 @@ main {
 */
 @media (min-width: 48rem) {
   main {
+    $varMargin: 5.5rem;
+
     padding: 5rem 0 5.5rem 0;
+
+    /* common-button */
+    input[type="button"] {
+      font-size: 1.125rem;
+    }
+
+    section.bienvenido {
+      /* h2-position */
+      h2 {
+        align-self: flex-start;
+        padding: 2rem 0 0 $varMargin;
+      }
+      /* format-p */
+      p {
+        align-self: flex-start;
+        padding: 0 $varMargin;
+      }
+      /* format-button */
+      input[type="button"] {
+        align-self: flex-start;
+        margin: 3rem 0 6rem $varMargin;
+        max-width: 14rem;
+        height: 3.5rem;
+      }
+    }
+
+    section.episodios {
+      div.container {
+        width: 100%;
+        h2 {
+          padding: 0 0 1.5rem $varMargin;
+          align-self: flex-start;
+        }
+        /* format-container-layout */
+        div.podcast {
+          width: 100%;
+          padding: 0 calc($varMargin * 0.7) 4.5rem calc($varMargin * 0.7);
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          align-items: center;
+          /* format-elements */
+          iframe {
+            margin-top: 0;
+            margin-bottom: 3.3rem;
+            width: 22rem;
+          }
+        }
+      }
+    }
   }
 }
 
