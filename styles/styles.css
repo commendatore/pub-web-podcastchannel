@@ -237,7 +237,9 @@ main {
   /* section-nosotros */
   /* section-entrevistas */
   /* section-topicos */
-  /* section-novedades */
+  /*
+    section-novedades
+  */
 }
 
 main h2 {
@@ -365,8 +367,6 @@ main section.episodios div.container div.podcast iframe {
 
 main section.nosotros {
   /* format-img */
-  /* format-h2 */
-  /* format-p */
 }
 
 main section.nosotros img.flotar {
@@ -375,13 +375,18 @@ main section.nosotros img.flotar {
   margin: -5rem 0 0 0;
 }
 
-main section.nosotros h2 {
+main section.nosotros div.container {
+  /* format-h2 */
+  /* format-p */
+}
+
+main section.nosotros div.container h2 {
   padding: 1.75rem 1rem 0 1rem;
   -ms-flex-item-align: start;
       align-self: flex-start;
 }
 
-main section.nosotros p {
+main section.nosotros div.container p {
   font-size: 0.875rem;
   padding: 0.5rem 1rem;
 }
@@ -423,7 +428,17 @@ main section.topicos h2 {
   padding: 3rem 1rem 1.5rem 1rem;
 }
 
-main section.topicos div.topic {
+main section.topicos div.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main section.topicos div.container div.topic {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -442,13 +457,13 @@ main section.topicos div.topic {
   /* format-elements */
 }
 
-main section.topicos div.topic img {
+main section.topicos div.container div.topic img {
   height: 6.5rem;
   width: 6.5rem;
   margin: 0.875rem 0;
 }
 
-main section.topicos div.topic h3 {
+main section.topicos div.container div.topic h3 {
   width: 100%;
   padding: 0 1rem;
   text-align: center;
@@ -502,7 +517,9 @@ main section.novedades div.container input {
 @media (min-width: 48rem) {
   main {
     padding: 5rem 0 5.5rem 0;
-    /* common-button */
+  }
+  main h2 {
+    font-size: 3rem;
   }
   main input[type="button"] {
     font-size: 1.125rem;
@@ -513,14 +530,16 @@ main section.novedades div.container input {
     /* format-button */
   }
   main section.bienvenido h2 {
+    font-size: 4rem;
     -ms-flex-item-align: start;
         align-self: flex-start;
     padding: 2rem 0 0 5.5rem;
   }
   main section.bienvenido p {
+    font-size: 1rem;
     -ms-flex-item-align: start;
         align-self: flex-start;
-    padding: 0 5.5rem;
+    padding: 0.5rem 5.5rem;
   }
   main section.bienvenido input[type="button"] {
     -ms-flex-item-align: start;
@@ -559,6 +578,80 @@ main section.novedades div.container input {
     margin-top: 0;
     margin-bottom: 3.3rem;
     width: 22rem;
+  }
+  main section.nosotros {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    /* format-img */
+  }
+  main section.nosotros img.flotar {
+    position: relative;
+    overflow: visible;
+    margin: -5rem 0 0 0;
+  }
+  main section.nosotros div.container {
+    padding: 0 5.5rem 0 1rem;
+    /* format-h2 */
+    /* format-p */
+  }
+  main section.nosotros div.container h2 {
+    padding: 0 0;
+  }
+  main section.nosotros div.container p {
+    font-size: 1rem;
+    padding: 0.5rem 0;
+  }
+  main section.entrevistas {
+    /* format-h2 */
+    /* format-container-layout */
+  }
+  main section.entrevistas h2 {
+    padding: 3rem 5.5rem 2rem 5.5rem;
+  }
+  main section.entrevistas div {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main section.topicos {
+    /* format-h2 */
+    /* format-container-layout */
+  }
+  main section.topicos h2 {
+    padding: 3rem 5.5rem 3rem 5.5rem;
+    text-align: center;
+  }
+  main section.topicos div.container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    padding: 0 calc($varMargin * 0.7) 5.5rem calc($varMargin * 0.7);
+  }
+  main section.topicos div.container div.topic {
+    margin: 0;
+    /* format-elements */
+  }
+  main section.topicos div.container div.topic img {
+    margin: 0.875rem 0;
+  }
+  main section.novedades div.container input {
+    width: 21.5rem;
+    height: 3.5rem;
   }
 }
 
