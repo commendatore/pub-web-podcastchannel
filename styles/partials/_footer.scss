@@ -24,6 +24,9 @@ footer {
     justify-content: space-between;
     list-style: none;
     padding-top: 1rem;
+    a {
+      color: $primary-color;
+    }
     li i {
       font-size: 1rem;
     }

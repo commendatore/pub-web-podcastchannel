@@ -1,13 +1,13 @@
 /* google fonts */
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;600&display=swap");
 /* fontawesome v5 */
+@import url("https://use.fontawesome.com/releases/v5.15.1/css/fontawesome.css");
 @import url("https://use.fontawesome.com/releases/v5.15.1/css/regular.css");
 @import url("https://use.fontawesome.com/releases/v5.15.1/css/brands.css");
-@import url("https://use.fontawesome.com/releases/v5.15.1/css/fontawesome.css");
 /* sass partials */
 * {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -230,28 +230,40 @@ main {
 main h3,
 main h2,
 main p {
-  padding: 20px 20px;
+  padding: 1rem 1rem;
 }
 
 main input,
 main iframe,
 main img {
-  clear: none;
-  margin: 20px 20px;
+  margin: 1rem 1rem;
 }
 
-main input {
+main input[type="button"] {
+  /* format */
   width: 288px;
   height: 48px;
-  text-transform: uppercase;
+  border: none;
+  background: #00f3bb;
+  color: #060a24;
+  cursor: pointer;
+  /* font-settings */
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 500;
   font-size: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+main input[type="button"]:hover {
+  background-image: linear-gradient(225deg, #0000fe 0%, #00f0b8 100%);
 }
 
 main iframe {
   width: 298px;
-  height: 225px;
+  height: 232px;
   background-color: #060a24;
-  opacity: 0.55;
+  border-radius: 1rem;
 }
 
 /* 
@@ -260,7 +272,7 @@ main iframe {
 */
 @media (min-width: 48rem) {
   main {
-    padding: 88px 0px;
+    padding: 80px 0 88px 0;
   }
 }
 
@@ -317,6 +329,10 @@ footer ul {
           justify-content: space-between;
   list-style: none;
   padding-top: 1rem;
+}
+
+footer ul a {
+  color: #060a24;
 }
 
 footer ul li i {
