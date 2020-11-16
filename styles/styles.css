@@ -369,6 +369,7 @@ main section.episodios div.container div.podcast iframe {
   margin-top: 0.625rem;
   width: 18.625rem;
   height: 14.5rem;
+  border: none;
   background-color: #060a24;
   border-radius: 1rem;
 }
@@ -545,7 +546,6 @@ main section.novedades div.container input {
   }
   main section.episodios div.container div.podcast {
     width: 100%;
-    padding: 0 calc($varMargin * 0.7) 4.5rem calc($varMargin * 0.7);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
