@@ -1,21 +1,21 @@
 /* 
-  responsive mode for mobile first
-  main container content for website
+  responsive for mobile
+  main container with sections
 */
 main {
   padding-top: 2.75rem;
   padding-bottom: 7.5rem;
   width: 100%;
 
-  /* common-h2 */
+  /* common-style */
   h2 {
     font-family: $secondary-font;
     font-weight: 500;
     font-size: 2.25rem;
   }
-  /* common-button */
+
   input[type="button"] {
-    /* format-style */
+    /* format */
     width: 100%;
     max-width: 18rem;
     height: 3rem;
@@ -23,7 +23,7 @@ main {
     color: $primary-color;
     background: $primary-color-hover;
     cursor: pointer;
-    /* font-settings */
+    /* font */
     font-family: $primary-font;
     font-weight: 500;
     font-size: 1rem;
@@ -38,70 +38,79 @@ main {
       );
     }
   }
-  /* common-img */
+
   img {
     display: block;
     width: 20rem;
     object-fit: contain;
   }
-  /* common-section-layout */
+
   section {
-    /* format-layout */
+    /* layout */
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
+  /* common-style-end */
+
   /* 
-    section-bienvenido 
+    section
+    bienvenido 
   */
   section.bienvenido {
-    /* format-h2*/
     h2 {
       padding: 1.875rem 1rem 0 1rem;
+
       span {
         text-decoration: line-through;
       }
     }
-    /* format-p */
+
     p {
       padding: 1rem 1rem 0 1rem;
     }
-    /* format-button */
+
     input[type="button"] {
       margin: 2.25rem 1rem;
     }
   }
 
-  /* section-episodios */
+  /* 
+    section
+    episodios
+  */
   section.episodios {
-    /* section-backgraund-gradient*/
+    padding-top: 4rem;
+    padding-bottom: 8.5rem;
+
+    /* background-transform */
     transform: skewY(-4deg);
     background-image: linear-gradient(
       225deg,
       $bg-primary-color-gradient 0%,
       $bg-secondary-color-gradient 100%
     );
-    padding-top: 64px;
-    padding-bottom: 8.5rem;
 
-    /* format-h2 */
     div.container {
       transform: skewY(4deg);
+
       h2 {
         padding: 0 1rem 0.75rem 1rem;
         align-self: flex-start;
         color: $bg-color;
       }
-      /* format-container-layout */
+
+      /* container-podcast */
       div.podcast {
         width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        /* format-elements */
+
+        /* element-podcast */
         iframe {
           margin-top: 0.625rem;
           width: 18.625rem;
@@ -113,21 +122,25 @@ main {
     }
   }
 
-  /* section-nosotros */
+  /* 
+    section
+    nosotros
+  */
   section.nosotros {
-    /* format-img */
+    /* floating img */
     img.flotar {
       position: relative;
       overflow: visible;
       margin: -5rem 0 0 0;
     }
+
+    /* description */
     div.container {
-      /* format-h2 */
       h2 {
         padding: 1.75rem 1rem 0 1rem;
         align-self: flex-start;
       }
-      /* format-p */
+
       p {
         font-size: 0.875rem;
         padding: 0.5rem 1rem;
@@ -135,15 +148,17 @@ main {
     }
   }
 
-  /* section-entrevistas */
+  /*
+    section
+    entrevistas
+  */
   section.entrevistas {
-    /* format-h2 */
     h2 {
       align-self: flex-start;
       padding: 2.875rem 1rem 0.875rem 1rem;
     }
-    /* format-container-layout */
-    div {
+
+    div.container {
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -152,16 +167,20 @@ main {
     }
   }
 
-  /* section-topicos */
+  /*
+    section
+    topicos
+  */
   section.topicos {
-    /* format-h2 */
     h2 {
       padding: 3rem 1rem 1.5rem 1rem;
     }
-    /* format-container-layout */
+
     div.container {
       display: flex;
       flex-direction: column;
+
+      /* elements */
       div.topic {
         width: 100%;
         display: flex;
@@ -169,12 +188,13 @@ main {
         justify-content: center;
         align-items: center;
         margin-bottom: 2.5rem;
-        /* format-elements */
+
         img {
           height: 6.5rem;
           width: 6.5rem;
           margin: 0.875rem 0;
         }
+
         h3 {
           width: 100%;
           padding: 0 1rem;
@@ -185,20 +205,22 @@ main {
   }
 
   /*
-    section-novedades
+    section
+    novedades
   */
   section.novedades {
-    /* section-backgraund-gradient*/
-    transform: skewY(-4deg) translateY(88px);
+    position: relative;
+    padding-top: 2.75rem;
+    padding-bottom: 4rem;
+
+    /* background-transform */
+    transform: skewY(-4deg) translateY(5.5rem);
     background-image: linear-gradient(
       225deg,
       $bg-primary-color-gradient 0%,
       $bg-secondary-color-gradient 100%
     );
-    padding-top: 44px;
-    padding-bottom: 66px;
-    position: relative;
-    /* format-h2 */
+
     div.container {
       transform: skewY(4deg);
       width: 100%;
@@ -206,12 +228,13 @@ main {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+
       h2 {
         padding: 0 1rem;
         color: $bg-color;
         text-align: center;
       }
-      /* format-input */
+
       input {
         margin: 2.25rem 1rem 4.25rem 1rem;
       }
@@ -220,14 +243,14 @@ main {
 }
 
 /* 
-  container responsive mode for desktop
+  responsive for desktop
   min width: 768px = 48rem
 */
 @media (min-width: 48rem) {
   main {
     $varMargin: 5.5rem;
 
-    padding: 5rem 0 5.5rem 0;
+    padding: 5rem 0 $varMargin 0;
 
     h2 {
       font-size: 3rem;
@@ -238,19 +261,18 @@ main {
     }
 
     section.bienvenido {
-      /* h2-position */
       h2 {
         font-size: 4rem;
         align-self: flex-start;
         padding: 2rem 0 0 $varMargin;
       }
-      /* format-p */
+
       p {
         font-size: 1rem;
         align-self: flex-start;
         padding: 0.5rem $varMargin;
       }
-      /* format-button */
+
       input[type="button"] {
         align-self: flex-start;
         margin: 3rem 0 6rem $varMargin;
@@ -262,11 +284,12 @@ main {
     section.episodios {
       div.container {
         width: 100%;
+
         h2 {
           padding: 0 0 1.5rem $varMargin;
           align-self: flex-start;
         }
-        /* format-container-layout */
+
         div.podcast {
           width: 100%;
           padding: 0 calc($varMargin * 0.7) 4.5rem calc($varMargin * 0.7);
@@ -274,7 +297,7 @@ main {
           flex-direction: row;
           justify-content: space-around;
           align-items: center;
-          /* format-elements */
+
           iframe {
             margin-top: 0;
             margin-bottom: 3.3rem;
@@ -286,19 +309,20 @@ main {
 
     section.nosotros {
       flex-direction: row;
-      /* format-img */
+
       img.flotar {
         position: relative;
         overflow: visible;
         margin: -5rem 0 0 0;
       }
+
       div.container {
         padding: 0 $varMargin 0 1rem;
-        /* format-h2 */
+
         h2 {
           padding: 0 0;
         }
-        /* format-p */
+
         p {
           font-size: 1rem;
           padding: 0.5rem 0;
@@ -307,12 +331,11 @@ main {
     }
 
     section.entrevistas {
-      /* format-h2 */
       h2 {
         padding: 3rem $varMargin 2rem $varMargin;
       }
-      /* format-container-layout */
-      div {
+
+      div.container {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-evenly;
@@ -321,19 +344,18 @@ main {
     }
 
     section.topicos {
-      /* format-h2 */
       h2 {
         padding: 3rem $varMargin 3rem $varMargin;
         text-align: center;
       }
-      /* format-container-layout */
+
       div.container {
         flex-direction: row;
         justify-content: space-evenly;
         padding: 0 calc($varMargin * 0.7) 5.5rem calc($varMargin * 0.7);
         div.topic {
           margin: 0;
-          /* format-elements */
+
           img {
             margin: 0.875rem 0;
           }
@@ -349,16 +371,5 @@ main {
         }
       }
     }
-  }
-}
-
-/* 
-  limit screen max width to 1200px = 75rem 
-  and center the container in the viewport
-*/
-@media (min-width: 75rem) {
-  main {
-    max-width: 75em;
-    margin: 0 calc((100% - 75rem) / 2);
   }
 }

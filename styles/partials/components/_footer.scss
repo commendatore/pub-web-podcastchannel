@@ -1,6 +1,6 @@
 /* 
-  responsive mode for mobile first
-  footer paragraph with social media icons
+  responsive for mobile
+  footer with fontawesome
 */
 footer {
   position: fixed;
@@ -11,12 +11,14 @@ footer {
   align-items: center;
   flex-direction: column;
   background-color: $bg-color;
+
   /* copyright */
   p {
     padding-top: 1.5rem;
     font-size: 0.875rem;
   }
-  /* social media */
+
+  /* social media icon links */
   ul {
     width: 13.125rem;
     display: flex;
@@ -24,9 +26,11 @@ footer {
     justify-content: space-between;
     list-style: none;
     padding-top: 1rem;
+
     a {
       color: $primary-color;
     }
+
     li i {
       font-size: 1rem;
     }
@@ -34,7 +38,7 @@ footer {
 }
 
 /* 
-  footer responsive mode for desktop
+  responsive for desktop
   min width: 768px = 48rem
 */
 @media (min-width: 48rem) {
@@ -53,16 +57,5 @@ footer {
       padding-top: 0;
       margin-right: 6.25rem;
     }
-  }
-}
-
-/* 
-  limit screen max width to 1200px = 75rem 
-  and center the container in the viewport
-*/
-@media (min-width: 75rem) {
-  footer {
-    max-width: 75em;
-    margin: 0 calc((100% - 75rem) / 2);
   }
 }

@@ -4,7 +4,7 @@
 @import url("https://use.fontawesome.com/releases/v5.15.1/css/fontawesome.css");
 @import url("https://use.fontawesome.com/releases/v5.15.1/css/regular.css");
 @import url("https://use.fontawesome.com/releases/v5.15.1/css/brands.css");
-/* sass partials */
+/* partials */
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -12,13 +12,28 @@
   padding: 0;
 }
 
+/* theme colors */
+/* theme fonts */
 body {
   font-family: "IBM Plex Mono", monospace, "IBM Plex Sans", sans-serif;
   background-color: white;
 }
 
 /* 
-  responsive mode for mobile first
+  limit screen max width to 1200px = 75rem 
+  and center the container in the viewport
+*/
+@media (min-width: 75rem) {
+  header,
+  main,
+  footer {
+    max-width: 75em;
+    margin: 0 calc((100% - 75rem) / 2);
+  }
+}
+
+/* 
+  responsive for mobile
   navbar menu with hamburguer button
 */
 header {
@@ -78,7 +93,7 @@ header .menu {
 header .logo {
   display: block;
   float: left;
-  padding: 0.625rem 0 0.625rem 1rem;
+  padding: 0.5rem 0 0.5rem 1rem;
   text-decoration: none;
 }
 
@@ -107,8 +122,7 @@ header .menu-icon .navicon {
   width: 1rem;
 }
 
-header .menu-icon .navicon:before,
-header .menu-icon .navicon:after {
+header .menu-icon .navicon:before, header .menu-icon .navicon:after {
   background: #060a24;
   content: "";
   display: block;
@@ -131,7 +145,7 @@ header .menu-btn {
   display: none;
   /* 
       show mobile menu list of items
-      1 element = 3.75rem (height)
+      1 element = 3.75rem height
     */
   /* hamburguer-animation */
   /* hamburguer-animation-end */
@@ -161,7 +175,7 @@ header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
 }
 
 /* 
-  navbar menu responsive mode for desktop
+  responsive for desktop
   min width: 768px = 48rem
 */
 @media (min-width: 48rem) {
@@ -208,37 +222,38 @@ header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
 }
 
 /* 
-  limit screen max width to 1200px = 75rem
-  and center the container in the viewport
-*/
-@media (min-width: 75rem) {
-  header {
-    max-width: 75rem;
-    margin: 0 calc((100% - 75rem) / 2);
-  }
-}
-
-/* 
-  responsive mode for mobile first
-  main container content for website
+  responsive for mobile
+  main container with sections
 */
 main {
   padding-top: 2.75rem;
   padding-bottom: 7.5rem;
   width: 100%;
-  /* common-h2 */
-  /* common-button */
-  /* common-img */
-  /* common-section-layout */
+  /* common-style */
+  /* common-style-end */
   /* 
-    section-bienvenido 
+    section
+    bienvenido 
   */
-  /* section-episodios */
-  /* section-nosotros */
-  /* section-entrevistas */
-  /* section-topicos */
+  /* 
+    section
+    episodios
+  */
+  /* 
+    section
+    nosotros
+  */
   /*
-    section-novedades
+    section
+    entrevistas
+  */
+  /*
+    section
+    topicos
+  */
+  /*
+    section
+    novedades
   */
 }
 
@@ -249,7 +264,7 @@ main h2 {
 }
 
 main input[type="button"] {
-  /* format-style */
+  /* format */
   width: 100%;
   max-width: 18rem;
   height: 3rem;
@@ -257,7 +272,7 @@ main input[type="button"] {
   color: #060a24;
   background: #00f3bb;
   cursor: pointer;
-  /* font-settings */
+  /* font */
   font-family: "IBM Plex Mono", monospace;
   font-weight: 500;
   font-size: 1rem;
@@ -277,7 +292,7 @@ main img {
 }
 
 main section {
-  /* format-layout */
+  /* layout */
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -292,12 +307,6 @@ main section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-main section.bienvenido {
-  /* format-h2*/
-  /* format-p */
-  /* format-button */
 }
 
 main section.bienvenido h2 {
@@ -317,19 +326,18 @@ main section.bienvenido input[type="button"] {
 }
 
 main section.episodios {
-  /* section-backgraund-gradient*/
+  padding-top: 4rem;
+  padding-bottom: 8.5rem;
+  /* background-transform */
   -webkit-transform: skewY(-4deg);
           transform: skewY(-4deg);
   background-image: linear-gradient(225deg, #0000ff 0%, #0000a3 100%);
-  padding-top: 64px;
-  padding-bottom: 8.5rem;
-  /* format-h2 */
 }
 
 main section.episodios div.container {
   -webkit-transform: skewY(4deg);
           transform: skewY(4deg);
-  /* format-container-layout */
+  /* container-podcast */
 }
 
 main section.episodios div.container h2 {
@@ -354,7 +362,7 @@ main section.episodios div.container div.podcast {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  /* format-elements */
+  /* element-podcast */
 }
 
 main section.episodios div.container div.podcast iframe {
@@ -366,18 +374,14 @@ main section.episodios div.container div.podcast iframe {
 }
 
 main section.nosotros {
-  /* format-img */
+  /* floating img */
+  /* description */
 }
 
 main section.nosotros img.flotar {
   position: relative;
   overflow: visible;
   margin: -5rem 0 0 0;
-}
-
-main section.nosotros div.container {
-  /* format-h2 */
-  /* format-p */
 }
 
 main section.nosotros div.container h2 {
@@ -391,18 +395,13 @@ main section.nosotros div.container p {
   padding: 0.5rem 1rem;
 }
 
-main section.entrevistas {
-  /* format-h2 */
-  /* format-container-layout */
-}
-
 main section.entrevistas h2 {
   -ms-flex-item-align: start;
       align-self: flex-start;
   padding: 2.875rem 1rem 0.875rem 1rem;
 }
 
-main section.entrevistas div {
+main section.entrevistas div.container {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -419,11 +418,6 @@ main section.entrevistas div {
           align-items: center;
 }
 
-main section.topicos {
-  /* format-h2 */
-  /* format-container-layout */
-}
-
 main section.topicos h2 {
   padding: 3rem 1rem 1.5rem 1rem;
 }
@@ -436,6 +430,7 @@ main section.topicos div.container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  /* elements */
 }
 
 main section.topicos div.container div.topic {
@@ -454,7 +449,6 @@ main section.topicos div.container div.topic {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 2.5rem;
-  /* format-elements */
 }
 
 main section.topicos div.container div.topic img {
@@ -470,14 +464,13 @@ main section.topicos div.container div.topic h3 {
 }
 
 main section.novedades {
-  /* section-backgraund-gradient*/
-  -webkit-transform: skewY(-4deg) translateY(88px);
-          transform: skewY(-4deg) translateY(88px);
-  background-image: linear-gradient(225deg, #0000ff 0%, #0000a3 100%);
-  padding-top: 44px;
-  padding-bottom: 66px;
   position: relative;
-  /* format-h2 */
+  padding-top: 2.75rem;
+  padding-bottom: 4rem;
+  /* background-transform */
+  -webkit-transform: skewY(-4deg) translateY(5.5rem);
+          transform: skewY(-4deg) translateY(5.5rem);
+  background-image: linear-gradient(225deg, #0000ff 0%, #0000a3 100%);
 }
 
 main section.novedades div.container {
@@ -497,7 +490,6 @@ main section.novedades div.container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  /* format-input */
 }
 
 main section.novedades div.container h2 {
@@ -511,7 +503,7 @@ main section.novedades div.container input {
 }
 
 /* 
-  container responsive mode for desktop
+  responsive for desktop
   min width: 768px = 48rem
 */
 @media (min-width: 48rem) {
@@ -523,11 +515,6 @@ main section.novedades div.container input {
   }
   main input[type="button"] {
     font-size: 1.125rem;
-  }
-  main section.bienvenido {
-    /* h2-position */
-    /* format-p */
-    /* format-button */
   }
   main section.bienvenido h2 {
     font-size: 4rem;
@@ -550,7 +537,6 @@ main section.novedades div.container input {
   }
   main section.episodios div.container {
     width: 100%;
-    /* format-container-layout */
   }
   main section.episodios div.container h2 {
     padding: 0 0 1.5rem 5.5rem;
@@ -572,7 +558,6 @@ main section.novedades div.container input {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    /* format-elements */
   }
   main section.episodios div.container div.podcast iframe {
     margin-top: 0;
@@ -584,7 +569,6 @@ main section.novedades div.container input {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    /* format-img */
   }
   main section.nosotros img.flotar {
     position: relative;
@@ -593,8 +577,6 @@ main section.novedades div.container input {
   }
   main section.nosotros div.container {
     padding: 0 5.5rem 0 1rem;
-    /* format-h2 */
-    /* format-p */
   }
   main section.nosotros div.container h2 {
     padding: 0 0;
@@ -603,14 +585,10 @@ main section.novedades div.container input {
     font-size: 1rem;
     padding: 0.5rem 0;
   }
-  main section.entrevistas {
-    /* format-h2 */
-    /* format-container-layout */
-  }
   main section.entrevistas h2 {
     padding: 3rem 5.5rem 2rem 5.5rem;
   }
-  main section.entrevistas div {
+  main section.entrevistas div.container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -623,10 +601,6 @@ main section.novedades div.container input {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-  main section.topicos {
-    /* format-h2 */
-    /* format-container-layout */
   }
   main section.topicos h2 {
     padding: 3rem 5.5rem 3rem 5.5rem;
@@ -644,7 +618,6 @@ main section.novedades div.container input {
   }
   main section.topicos div.container div.topic {
     margin: 0;
-    /* format-elements */
   }
   main section.topicos div.container div.topic img {
     margin: 0.875rem 0;
@@ -656,19 +629,8 @@ main section.novedades div.container input {
 }
 
 /* 
-  limit screen max width to 1200px = 75rem 
-  and center the container in the viewport
-*/
-@media (min-width: 75rem) {
-  main {
-    max-width: 75em;
-    margin: 0 calc((100% - 75rem) / 2);
-  }
-}
-
-/* 
-  responsive mode for mobile first
-  footer paragraph with social media icons
+  responsive for mobile
+  footer with fontawesome
 */
 footer {
   position: fixed;
@@ -687,7 +649,7 @@ footer {
           flex-direction: column;
   background-color: white;
   /* copyright */
-  /* social media */
+  /* social media icon links */
 }
 
 footer p {
@@ -719,7 +681,7 @@ footer ul li i {
 }
 
 /* 
-  footer responsive mode for desktop
+  responsive for desktop
   min width: 768px = 48rem
 */
 @media (min-width: 48rem) {
@@ -743,17 +705,6 @@ footer ul li i {
   footer ul {
     padding-top: 0;
     margin-right: 6.25rem;
-  }
-}
-
-/* 
-  limit screen max width to 1200px = 75rem 
-  and center the container in the viewport
-*/
-@media (min-width: 75rem) {
-  footer {
-    max-width: 75em;
-    margin: 0 calc((100% - 75rem) / 2);
   }
 }
 /*# sourceMappingURL=styles.css.map */

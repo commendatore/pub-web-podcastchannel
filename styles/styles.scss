@@ -6,9 +6,10 @@
 @import url("https://use.fontawesome.com/releases/v5.15.1/css/regular.css");
 @import url("https://use.fontawesome.com/releases/v5.15.1/css/brands.css");
 
-/* sass partials */
-@import "./partials/variables";
-@import "./partials/baserules";
-@import "./partials/header";
-@import "./partials/main";
-@import "./partials/footer";
+/* partials */
+@import "./partials/base/reset";
+@import "./partials/base/variables";
+@import "./partials/base/baserules";
+@import "./partials/components/header";
+@import "./partials/components/main";
+@import "./partials/components/footer";

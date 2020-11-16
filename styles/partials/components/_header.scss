@@ -1,5 +1,5 @@
 /* 
-  responsive mode for mobile first
+  responsive for mobile
   navbar menu with hamburguer button
 */
 header {
@@ -52,7 +52,7 @@ header {
   .logo {
     display: block;
     float: left;
-    padding: 0.625rem 0 0.625rem 1rem;
+    padding: 0.5rem 0 0.5rem 1rem;
     text-decoration: none;
     img {
       height: 1.5rem;
@@ -74,24 +74,23 @@ header {
       position: relative;
       transition: background 0.2s ease-out;
       width: 1rem;
-    }
 
-    .navicon:before,
-    .navicon:after {
-      background: $primary-color;
-      content: "";
-      display: block;
-      height: 100%;
-      position: absolute;
-      transition: all 0.2s ease-out;
-      width: 100%;
-    }
-
-    .navicon:before {
-      top: 0.313rem;
-    }
-    .navicon:after {
-      top: -0.313rem;
+      &:before,
+      &:after {
+        background: $primary-color;
+        content: "";
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all 0.2s ease-out;
+        width: 100%;
+      }
+      &:before {
+        top: 0.313rem;
+      }
+      &:after {
+        top: -0.313rem;
+      }
     }
   }
   /* hamburguer-end */
@@ -102,7 +101,7 @@ header {
 
     /* 
       show mobile menu list of items
-      1 element = 3.75rem (height)
+      1 element = 3.75rem height
     */
     &:checked ~ .menu {
       max-height: calc(4 * 3.75rem);
@@ -131,7 +130,7 @@ header {
 }
 
 /* 
-  navbar menu responsive mode for desktop
+  responsive for desktop
   min width: 768px = 48rem
 */
 @media (min-width: 48rem) {
@@ -176,16 +175,5 @@ header {
     .menu-icon {
       display: none;
     }
-  }
-}
-
-/* 
-  limit screen max width to 1200px = 75rem
-  and center the container in the viewport
-*/
-@media (min-width: 75rem) {
-  header {
-    max-width: 75rem;
-    margin: 0 calc((100% - 75rem) / 2);
   }
 }
