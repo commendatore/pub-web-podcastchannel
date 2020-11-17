@@ -1,1 +1,6 @@
-http://app.hiwi.com.ar/
+webserver:
+  http://st-web-podcastchannel.hiwi.com.ar/
+  https://commendatore.github.io/st-web-podcastchannel/
+
+github:
+  https://github.com/commendatore/st-web-podcastchannel
