@@ -374,18 +374,15 @@ main section.episodios div.container div.podcast iframe {
   border-radius: 1rem;
 }
 
-main section.nosotros {
-  /* floating img */
-  /* description */
-}
-
 main section.nosotros img.flotar {
+  /* floating-img */
   position: relative;
   overflow: visible;
   margin: -5rem 0 0 0;
 }
 
 main section.nosotros div.container h2 {
+  /* text-description */
   padding: 1.75rem 1rem 0 1rem;
   -ms-flex-item-align: start;
       align-self: flex-start;
@@ -570,11 +567,6 @@ main section.novedades div.container input {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  main section.nosotros img.flotar {
-    position: relative;
-    overflow: visible;
-    margin: -5rem 0 0 0;
-  }
   main section.nosotros div.container {
     padding: 0 5.5rem 0 1rem;
   }
@@ -614,7 +606,7 @@ main section.novedades div.container input {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    padding: 0 calc($varMargin * 0.7) 5.5rem calc($varMargin * 0.7);
+    padding: 0 calc(5.5rem * 0.7) 5.5rem calc(5.5rem * 0.7);
   }
   main section.topicos div.container div.topic {
     margin: 0;
