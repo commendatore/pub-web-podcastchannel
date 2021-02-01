@@ -1,5 +1,5 @@
 webserver:
-  http://st-web-podcastchannel.hiwi.com.ar/
+  https://st-web-podcastchannel.hiwi.com.ar/
   https://commendatore.github.io/st-web-podcastchannel/
 
 github:
